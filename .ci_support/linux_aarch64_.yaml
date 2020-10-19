@@ -3,7 +3,7 @@ BUILD:
 c_compiler:
 - gcc
 c_compiler_version:
-- '7.5'
+- '7'
 cairo:
 - '1.16'
 cdt_arch:
@@ -17,7 +17,7 @@ channel_targets:
 docker_image:
 - condaforge/linux-anvil-aarch64
 glib:
-- '2.58'
+- 2.64.6
 libpng:
 - '1.6'
 libxml2:
