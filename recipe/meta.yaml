@@ -1,5 +1,5 @@
 {% set name = "rrdtool" %}
-{% set version = "1.7.2" %}
+{% set version = "1.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/oetiker/rrdtool-1.x/archive/v{{ version }}.tar.gz
-  sha256: b26afc012dc0f2ade149bcb771e8b7d9b86922f5f9e4096c1c12e6d80061b61a
+  sha256: 88a59a645161d0cfd1af898459fc033af975816278cf132cc66bf0dd8d0559cc
 
 build:
-  number: 2
+  number: 0
   skip: true  # [win]
 
 requirements:
