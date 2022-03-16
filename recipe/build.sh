@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 # Get an updated config.sub and config.guess
 cp $BUILD_PREFIX/share/gnuconfig/config.* ./conftools
-set -euo pipefail
-IFS=$'\n\t'
+set -eo pipefail
 
 ./configure \
     "--prefix=${PREFIX}" \
