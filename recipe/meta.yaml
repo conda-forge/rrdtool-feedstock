@@ -10,11 +10,15 @@ source:
   sha256: b26afc012dc0f2ade149bcb771e8b7d9b86922f5f9e4096c1c12e6d80061b61a
 
 build:
-  number: 2
+  number: 3
   skip: true  # [win]
+  # Fails with "Bad CPU type in executable" when cross-compiling
+  skip_compile_pyc:                      # [osx and arm64]
+    - share/rrdtool/examples/stripes.py  # [osx and arm64]
 
 requirements:
   build:
+    - gnuconfig  # [unix]
     - {{ compiler('c') }}
     - make
     - libtool

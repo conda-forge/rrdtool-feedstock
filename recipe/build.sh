@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
-set -euo pipefail
-IFS=$'\n\t'
+# Get an updated config.sub and config.guess
+cp $BUILD_PREFIX/share/gnuconfig/config.* ./conftools
+set -eo pipefail
 
 ./configure \
     "--prefix=${PREFIX}" \
@@ -21,6 +22,8 @@ if [[ "$(uname)" == "Darwin" && "${PKG_VERSION}" == "1.7.2" ]]; then
     XFAIL_TESTS="${XFAIL_TESTS} rpn2"
 fi
 
+if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" || "${CROSSCOMPILING_EMULATOR}" != "" ]]; then
 make check XFAIL_TESTS="${XFAIL_TESTS}" || (cat tests/test-suite.log && exit 1)
+fi
 
 make install

@@ -3,7 +3,7 @@ BUILD:
 c_compiler:
 - gcc
 c_compiler_version:
-- '9'
+- '10'
 cairo:
 - '1.16'
 cdt_arch:
@@ -23,7 +23,7 @@ libpng:
 libxml2:
 - '2.9'
 pango:
-- '1.48'
+- '1.50'
 pin_run_as_build:
   cairo:
     max_pin: x.x
