@@ -3,9 +3,9 @@ BUILD:
 c_compiler:
 - gcc
 c_compiler_version:
-- '10'
+- '12'
 cairo:
-- '1.16'
+- '1'
 cdt_arch:
 - aarch64
 cdt_name:
@@ -21,17 +21,8 @@ glib:
 libpng:
 - '1.6'
 libxml2:
-- '2.9'
+- '2.11'
 pango:
 - '1.50'
-pin_run_as_build:
-  cairo:
-    max_pin: x.x
-  libpng:
-    max_pin: x.x
-  libxml2:
-    max_pin: x.x
-  pango:
-    max_pin: x.x
 target_platform:
 - linux-aarch64
