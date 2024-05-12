@@ -21,7 +21,7 @@ glib:
 libpng:
 - '1.6'
 libxml2:
-- '2.11'
+- '2.12'
 pango:
 - '1.50'
 target_platform:
