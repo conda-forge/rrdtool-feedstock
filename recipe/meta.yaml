@@ -12,7 +12,7 @@ source:
     - cloexec.patch
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
   # Fails with "Bad CPU type in executable" when cross-compiling
   skip_compile_pyc:   # [osx and arm64]
@@ -37,7 +37,7 @@ requirements:
     - gettext
     - glib
     - libpng
-    - libxml2
+    - libxml2-devel
     - pango
   run:
     # Looks pretty stable
