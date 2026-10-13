@@ -39,7 +39,7 @@ requirements:
     - ${{ stdlib("c") }}
     - autoconf
     - automake
-    - harfbuzz
+    - libharfbuzz
     - make
     - libtool
     # msgfmt/autopoint to compile & bootstrap the .po catalogs; runs on the
@@ -54,6 +54,7 @@ requirements:
     - glib
     - libpng
     - libxml2-devel
+    - libharfbuzz-devel
     - pango
     # gettext is external (AM_GNU_GETTEXT); libintl is part of glibc on Linux
     # but a separate library on macOS, so it is only needed there.
@@ -64,6 +65,9 @@ requirements:
     # run-export, so the macOS runtime dependency must be listed explicitly.
     - if: osx
       then: libintl
+  ignore_run_exports:
+    from_package:
+      - libharfbuzz-devel
 
 tests:
   - script:
